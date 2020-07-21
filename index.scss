@@ -206,7 +206,8 @@ img,input,select{outline:none;border:none};
     bottom:0;
     right: 0;
     z-index: 80;
-    animation: radial-pulse 1s infinite;
+    -webkit-animation: radial-pulse 1s infinite;
+            animation: radial-pulse 1s infinite;
     
     &:before{
       content: "";
@@ -244,6 +245,15 @@ img,input,select{outline:none;border:none};
     &--visible{
       opacity: 1;
     }
+  }
+}
+@-webkit-keyframes radial-pulse {
+  0% {
+    box-shadow: 0 0 0 0vw rgba(215, 116, 122, 0.8);;
+  }
+ 
+  100% {
+    box-shadow: 0 0 0 0.8vw rgba(215, 116, 122, 0);;
   }
 }
 @keyframes radial-pulse {

@@ -5,17 +5,38 @@
   "main": "index.pug",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "parcel index.pug --open"
+    "dev": "parcel index.pug --open",
+    "build": "parcel build index.pug --out-dir build"
   },
   "author": "targetbos@yandex.ru",
   "license": "ISC",
   "devDependencies": {
     "autoprefixer": "^9.8.5",
+    "babel-preset-env": "^1.7.0",
     "parcel": "^1.12.4",
+    "parcel-bundler": "^1.12.4",
     "pug": "^3.0.0",
     "sass": "^1.26.10"
   },
   "dependencies": {
-    "babel": "^6.23.0"
+    "babel": "^6.23.0",
+    "posthtml-img-autosize": "^0.1.5"
+  },
+  "targets": {
+    "main": {
+      "engines": {
+        "node": ">=4.x"
+      }
+    },
+    "module": {
+      "engines": {
+        "node": ">=8.x"
+      }
+    },
+    "browser": {
+      "engines": {
+        "browsers": ["> 1%", "not dead"]
+      }
+    }
   }
 }

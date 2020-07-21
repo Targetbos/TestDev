@@ -101,6 +101,9 @@
     box-sizing: border-box;
     color: #9b9b9b;
     margin-bottom: 0.9vw;
+    &::-webkit-input-placeholder{
+      color:#9b9b9b;
+    }
     &::placeholder,&::-webkit-input-placeholder, &::-moz-placeholder{
       color:#9b9b9b;
     }
