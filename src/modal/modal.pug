@@ -1,0 +1,31 @@
+mixin modal()
+  .modal.--hide
+    .modal__wrap
+      .modal__close.js_btn-close
+      .modal__wrap-form.--hide
+        .modal__title
+          span <strong style="font-weight: 700;">Получите</strong> программу обучения
+        .modal__desc
+          span Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut  
+        .modal__book
+        form.modal__form
+          label.modal__label-qualification
+            select.modal__input.modal__select(name="qualification")
+              option(value="qualification") Повышение квалификации
+              option(value="qualification1") Повышение квалификации1
+              option(value="qualification2") Повышение квалификации2
+              option(value="qualification3") Повышение квалификации3
+              option(value="qualification4") Повышение квалификации4
+            i.modal__icon-select
+          input.modal__input(type="text" name="userName" placeholder="Ваше имя")
+          input.modal__input(type="text" name="userPhone" placeholder="Ваш номер телефона")
+          .modal__btn-send.js__btn-send-form
+            span получить программу
+      .modal__wrap-answer-form.answer-form
+        .answer-form__wrap
+          .answer-form__inner-icon
+            i.answer-form__icon
+          .answer-form__title Ваш заказ принят.
+          .answer-form__desc Ожидайте звонка
+          .answer-form__bg-img
+          
