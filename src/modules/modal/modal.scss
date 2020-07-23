@@ -1,0 +1,334 @@
+
+.modal{
+  position:absolute;
+  display: flex;
+  align-items:center;
+  justify-content:center;
+  width:100%;
+  height: 100vh;
+  background: rgba(0,0,0,0.7);
+  z-index: 209;
+  &__wrap{
+    display: block;
+    position: relative;
+    background: linear-gradient(#FBEDE7,#fcfdfd);
+    border-radius: 2.4vw;
+  }
+  &__close{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position:absolute;
+    top:2vw;
+    right: 2vw;
+    width: 0.8vw;
+    height: 0.8vw;
+    cursor: pointer;
+    transform: rotate(90deg);
+    transition: transform 0.5s;
+    z-index:25;
+    &:before{
+      content:"\00D7";
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #999;
+    }
+    &:hover{
+      transform: rotate(180deg);
+    }
+  }
+  &__wrap-form{
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    width:33.33vw;
+    height: 30.64vw;
+    margin: 2.1vw 2vw;
+  }
+  &__title{
+    width: 100%;
+    font-size: 1.8vw;
+    font-weight: 300;
+    letter-spacing: 0.046vw;
+    margin-top: 2vw;
+    text-align:center;
+  }
+  &__desc{
+    display: block;
+    margin-top: 1.55vw;
+    text-align:center;
+    max-width: 28vw;
+    &>span{
+      font-size: 0.8vw;
+      font-weight: 300;
+      letter-spacing: 0.036vw;
+      line-height: 1vw;
+    }
+  }
+  &__book{
+    display: inline-block;
+    position: absolute;
+    width: 18vw;
+    height: 23.5vw;
+    left: -7.8vw;
+    top: 7.9vw;
+    background: url("./images/book.png");
+    background-size: contain;
+    z-index:7;
+
+  }
+  &__form{
+    display: flex;
+    flex-direction: column;
+    width: 25.8vw;
+    margin-top:2vw;
+    position:relative;
+    z-index:8;
+  }
+  &__label-qualification{
+    position: relative;
+  }
+  &__input{
+    display: inline-block;
+    width: 100%;
+    padding: 1.4vw 1.8vw;
+    border-radius: 2vw;
+    font-size: 1vw;
+    font-weight: 300;
+    box-sizing: border-box;
+    color: #9b9b9b;
+    margin-bottom: 0.9vw;
+    &::-webkit-input-placeholder{
+      color:#9b9b9b;
+    }
+    &::placeholder,&::-webkit-input-placeholder, &::-moz-placeholder{
+      color:#9b9b9b;
+    }
+  }
+  &__select{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    color:#9b9b9b;
+    cursor: pointer;
+  }
+  &__icon-select{
+    position: absolute;
+    width: 0.5vw;
+    height: 0.5vw;
+    border-right:2px solid #333;
+    border-bottom:2px solid #333;
+    top:1.5vw;
+    right: 2.1vw;
+    transform: rotate(45deg);
+    z-index:26;
+    pointer-events: none;
+  }
+  &__btn-send{
+    position: relative;
+    display: inline-block;
+    box-sizing: border-box;
+    margin: 0.2vw;
+    padding: 1.35vw 3.5vw 1.6vw;
+    border-radius: 2.6vw;
+    background: linear-gradient(#fabcbc, #ee858c);
+    box-shadow: 0 0.1vw 0.1vw 0.1vw #d7747a;
+    cursor: pointer;
+    color:#fff;
+    text-transform: uppercase;
+    font-size: 1vw;
+    letter-spacing: 0.08vw;
+    &:after{
+      content: "";
+      position: absolute;
+      width: 9vw;
+      height: 2.8vw;
+      background: url("./images/plant.png") no-repeat;
+      background-size: cover;
+      top: 0.3vw;
+      right: -2.5vw;
+    }
+  }
+}
+.--hide{
+  display:none;
+}
+.answer-form{
+  display: block;
+  &__wrap{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    min-width:17vw;
+    min-height: 13vw;
+    margin:2vw 5vw;
+  }
+  &__inner-icon{
+    display: flex;
+    justify-content: center;
+    margin-top:1.4vw;
+  }
+  &__icon{
+    display: block;
+    width: 5.5vw;
+    height: 5.2vw;
+    background: url("./images/galka.png")no-repeat;
+    background-size: cover;
+  }
+  &__title{
+    font-size: 1.6vw;
+    font-weight: bold;
+    margin-top: 1.4vw;
+    letter-spacing: 0.02vw;
+  }
+  &__desc{
+    font-weight: 300;
+    font-size: 1.5vw;
+    letter-spacing: 0.08vw;
+    margin-top: 1vw;
+  }
+  &__bg-img{
+    position:absolute;
+    width: 6vw;
+    height: 9vw;
+    background: url("./images/lepestok.png") no-repeat;
+    background-size: cover;
+    right: -0.4vw;
+    bottom: -0.02vw;
+  }
+}
+@media(max-width: 992px){
+  .modal{
+    &__wrap{
+      border-radius: 1.79rem;
+      min-width: 27rem;
+    }
+    &__close{
+      top:1.49rem;
+      right: 1.49rem;
+      width: 0.5rem;
+      height: 0.5rem;
+    }
+    &__wrap-form{
+      width:24.84rem;
+      height: 22.84rem;
+      margin: 1.57rem 1.5rem;
+    }
+    &__title{
+      font-size: 1.34rem;
+      margin-top: 1.5rem;
+      line-height: 1.5rem;
+
+    }
+    &__desc{
+      margin-top: 1.5rem;
+      max-width: 20.87rem;
+      &>span{
+        font-size: 0.8rem;
+        letter-spacing: 0.003rem;
+        line-height: 0.8rem;
+      }
+    }
+    &__book{
+      display: inline-block;
+      position: absolute;
+      width: 13.41rem;
+      height: 17.52rem;
+      left: -5.81rem;
+      top: 5.89rem;
+    }
+    &__form{
+      width: 19.23rem;
+      margin-top:1.5rem;
+    }
+    &__input{
+      display: inline-block;
+      width: 100%;
+      padding: 1rem 1.5rem;
+      border-radius: 2vw;
+      font-size: 0.8rem;
+      margin-bottom: 0.8rem;
+    }
+    &__icon-select{
+      position: absolute;
+      width: 0.37rem;
+      height: 0.37rem;
+      border-right:2px solid #333;
+      border-bottom:2px solid #333;
+      top:1.12rem;
+      right: 1.57rem;
+    }
+    &__btn-send{
+      padding: 1rem 2.61rem;
+      box-shadow: 0 0.075rem 0.075rem 0.075rem #d7747a;
+      color:#fff;
+      text-transform: uppercase;
+      font-size: 0.75rem;
+      letter-spacing: 0.06rem;
+      &:after{
+        content: "";
+        position: absolute;
+        width: 7rem;
+        height: 2rem;
+        top: 0.1rem;
+        right: -2rem;
+      }
+    }
+  }
+  .answer-form{
+    &__wrap{
+      width:100%;
+      align-items: center;
+      min-width:100%;
+      min-height: 14rem;
+      margin: 2rem 1rem;
+    }
+    &__inner-icon{
+      display: flex;
+      justify-content: center;
+      margin-top:1rem;
+    }
+    &__icon{
+      display: block;
+      width: 4.1rem;
+      height: 3.88rem;
+    }
+    &__title{
+      font-size: 1.19rem;
+      margin-top: 1.04rem;
+      letter-spacing: 0.01rem;
+    }
+    &__desc{
+      font-weight: 300;
+      font-size: 1.2rem;
+      letter-spacing: 0.06rem;
+      margin-top: 1rem;
+    }
+    &__bg-img{
+      width: 4.47rem;
+      height: 6.71rem;
+      right: -0.3rem;
+      bottom: -0.015rem;
+    }
+  }
+}
+@media(max-width: 436px){
+  .modal{
+    &__wrap{
+      width:100%;
+      margin:0 1rem;
+      min-width: 15rem;
+
+    }
+    &__wrap-form{
+      width:100%;
+      min-width:20rem;
+      height: auto;
+      margin: 1rem 0 2rem;
+      padding:0;
+    }
+    &__book{
+    display:none;
+    }
+  }
+}
